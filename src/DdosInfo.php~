@@ -1,0 +1,251 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DdosInfo
+ *
+ * @ORM\Table(name="ddos_info")
+ * @ORM\Entity
+ */
+class DdosInfo
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var binary
+     *
+     * @ORM\Column(name="ip", type="binary", nullable=false)
+     */
+    private $ip = '';
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="prefix", type="integer", nullable=false)
+     */
+    private $prefix;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=100, nullable=false)
+     */
+    private $type = '';
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="host", type="string", length=200, nullable=true)
+     */
+    private $host;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="status", type="string", length=10, nullable=true)
+     */
+    private $status;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime", nullable=false, options={"default"="0000-00-00 00:00:00"})
+     */
+    private $created = '0000-00-00 00:00:00';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modified", type="datetime", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
+     */
+    private $modified = 'CURRENT_TIMESTAMP';
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set ip.
+     *
+     * @param binary $ip
+     *
+     * @return DdosInfo
+     */
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
+
+        return $this;
+    }
+
+    /**
+     * Get ip.
+     *
+     * @return binary
+     */
+    public function getIp()
+    {
+        return $this->ip;
+    }
+
+    /**
+     * Set prefix.
+     *
+     * @param int $prefix
+     *
+     * @return DdosInfo
+     */
+    public function setPrefix($prefix)
+    {
+        $this->prefix = $prefix;
+
+        return $this;
+    }
+
+    /**
+     * Get prefix.
+     *
+     * @return int
+     */
+    public function getPrefix()
+    {
+        return $this->prefix;
+    }
+
+    /**
+     * Set type.
+     *
+     * @param string $type
+     *
+     * @return DdosInfo
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type.
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set host.
+     *
+     * @param string|null $host
+     *
+     * @return DdosInfo
+     */
+    public function setHost($host = null)
+    {
+        $this->host = $host;
+
+        return $this;
+    }
+
+    /**
+     * Get host.
+     *
+     * @return string|null
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Set status.
+     *
+     * @param string|null $status
+     *
+     * @return DdosInfo
+     */
+    public function setStatus($status = null)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status.
+     *
+     * @return string|null
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set created.
+     *
+     * @param \DateTime $created
+     *
+     * @return DdosInfo
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created.
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified.
+     *
+     * @param \DateTime $modified
+     *
+     * @return DdosInfo
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified.
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "dmetzler1988/entity-creation-from-db",
+    "description": "Create entity from existing database.",
+    "config": {
+        "platform-check": false,
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "doctrine/orm": "^2.8",
+        "symfony/dotenv": "^5.2",
+        "symfony/yaml": "^5.2"
+    }
+}

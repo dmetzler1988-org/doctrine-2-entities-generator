@@ -1,0 +1,282 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Log
+ *
+ * @ORM\Table(name="log")
+ * @ORM\Entity
+ */
+class Log
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="bigint", options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=true)
+     */
+    private $date;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="referenceId", type="text", length=65535, nullable=true)
+     */
+    private $referenceid;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="message", type="text", length=65535, nullable=true)
+     */
+    private $message;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="type", type="text", length=65535, nullable=true)
+     */
+    private $type;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="file", type="text", length=65535, nullable=true)
+     */
+    private $file;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="line", type="integer", nullable=true)
+     */
+    private $line;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="class", type="text", length=65535, nullable=true)
+     */
+    private $class;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="function", type="text", length=65535, nullable=true)
+     */
+    private $function;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set date.
+     *
+     * @param \DateTime|null $date
+     *
+     * @return Log
+     */
+    public function setDate($date = null)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date.
+     *
+     * @return \DateTime|null
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set referenceid.
+     *
+     * @param string|null $referenceid
+     *
+     * @return Log
+     */
+    public function setReferenceid($referenceid = null)
+    {
+        $this->referenceid = $referenceid;
+
+        return $this;
+    }
+
+    /**
+     * Get referenceid.
+     *
+     * @return string|null
+     */
+    public function getReferenceid()
+    {
+        return $this->referenceid;
+    }
+
+    /**
+     * Set message.
+     *
+     * @param string|null $message
+     *
+     * @return Log
+     */
+    public function setMessage($message = null)
+    {
+        $this->message = $message;
+
+        return $this;
+    }
+
+    /**
+     * Get message.
+     *
+     * @return string|null
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * Set type.
+     *
+     * @param string|null $type
+     *
+     * @return Log
+     */
+    public function setType($type = null)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type.
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set file.
+     *
+     * @param string|null $file
+     *
+     * @return Log
+     */
+    public function setFile($file = null)
+    {
+        $this->file = $file;
+
+        return $this;
+    }
+
+    /**
+     * Get file.
+     *
+     * @return string|null
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * Set line.
+     *
+     * @param int|null $line
+     *
+     * @return Log
+     */
+    public function setLine($line = null)
+    {
+        $this->line = $line;
+
+        return $this;
+    }
+
+    /**
+     * Get line.
+     *
+     * @return int|null
+     */
+    public function getLine()
+    {
+        return $this->line;
+    }
+
+    /**
+     * Set class.
+     *
+     * @param string|null $class
+     *
+     * @return Log
+     */
+    public function setClass($class = null)
+    {
+        $this->class = $class;
+
+        return $this;
+    }
+
+    /**
+     * Get class.
+     *
+     * @return string|null
+     */
+    public function getClass()
+    {
+        return $this->class;
+    }
+
+    /**
+     * Set function.
+     *
+     * @param string|null $function
+     *
+     * @return Log
+     */
+    public function setFunction($function = null)
+    {
+        $this->function = $function;
+
+        return $this;
+    }
+
+    /**
+     * Get function.
+     *
+     * @return string|null
+     */
+    public function getFunction()
+    {
+        return $this->function;
+    }
+}

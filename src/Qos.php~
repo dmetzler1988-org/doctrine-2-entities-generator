@@ -1,0 +1,189 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Qos
+ *
+ * @ORM\Table(name="qos")
+ * @ORM\Entity
+ */
+class Qos
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="nsn", type="string", length=11, nullable=true)
+     */
+    private $nsn;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="downloadSpeed", type="integer", nullable=true)
+     */
+    private $downloadspeed;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="uploadSpeed", type="integer", nullable=true)
+     */
+    private $uploadspeed;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="created", type="datetime", nullable=true)
+     */
+    private $created;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="modified", type="datetime", nullable=true)
+     */
+    private $modified;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nsn.
+     *
+     * @param string|null $nsn
+     *
+     * @return Qos
+     */
+    public function setNsn($nsn = null)
+    {
+        $this->nsn = $nsn;
+
+        return $this;
+    }
+
+    /**
+     * Get nsn.
+     *
+     * @return string|null
+     */
+    public function getNsn()
+    {
+        return $this->nsn;
+    }
+
+    /**
+     * Set downloadspeed.
+     *
+     * @param int|null $downloadspeed
+     *
+     * @return Qos
+     */
+    public function setDownloadspeed($downloadspeed = null)
+    {
+        $this->downloadspeed = $downloadspeed;
+
+        return $this;
+    }
+
+    /**
+     * Get downloadspeed.
+     *
+     * @return int|null
+     */
+    public function getDownloadspeed()
+    {
+        return $this->downloadspeed;
+    }
+
+    /**
+     * Set uploadspeed.
+     *
+     * @param int|null $uploadspeed
+     *
+     * @return Qos
+     */
+    public function setUploadspeed($uploadspeed = null)
+    {
+        $this->uploadspeed = $uploadspeed;
+
+        return $this;
+    }
+
+    /**
+     * Get uploadspeed.
+     *
+     * @return int|null
+     */
+    public function getUploadspeed()
+    {
+        return $this->uploadspeed;
+    }
+
+    /**
+     * Set created.
+     *
+     * @param \DateTime|null $created
+     *
+     * @return Qos
+     */
+    public function setCreated($created = null)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created.
+     *
+     * @return \DateTime|null
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified.
+     *
+     * @param \DateTime|null $modified
+     *
+     * @return Qos
+     */
+    public function setModified($modified = null)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified.
+     *
+     * @return \DateTime|null
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+}
