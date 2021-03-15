@@ -1,5 +1,5 @@
 {
-    "name": "dmetzler1988/entity-creation-from-db",
+    "name": "dmetzler1988-org/entity-creation-from-db",
     "description": "Create entity from existing database.",
     "config": {
         "platform-check": false,
