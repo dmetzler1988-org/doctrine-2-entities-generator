@@ -17,6 +17,9 @@ php vendor/bin/doctrine orm:convert-mapping --namespace="" --force --from-databa
 echo "Generate models to src:";
 php vendor/bin/doctrine orm:generate-entities --generate-annotations=false --update-entities=true --generate-methods=false ./src
 
+# Refresh composer
+composer dump-autoload -o
+
 # Validate schema
 echo "Validate schema:";
 php vendor/bin/doctrine orm:validate-schema
