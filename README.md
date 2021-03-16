@@ -10,13 +10,21 @@ composer install
 
 ## Usage
 
-Execute command
+At first, copy environment file and replace placeholders in it with your requirements
+
+````shell
+cp .env.dist .env
+````
+
+Now execute command
 
 ```shell
 sh doctrine-generator.sh
 ```
 
-Execute `autoload` before and after classes was created (or `composer.json` was modified)
+**HINT**
+
+You can also trigger the autoloader for composer/php manually via
 
 ```shell
 composer dump-autoload -o
